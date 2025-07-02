@@ -1,0 +1,14 @@
+services:
+  chamados-db:
+    image: postgres:latest
+    container_name: chamadoscolaboradores
+    environment:
+      POSTGRES_USER: fibralink
+      POSTGRES_PASSWORD: fibralink123
+    ports:
+      - "5432:5432"
+    volumes:
+      - chamados-data:/var/lib/postgresql/data
+
+volumes:
+  chamados-data: # Declaração do volume
